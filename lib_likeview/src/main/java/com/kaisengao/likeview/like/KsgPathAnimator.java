@@ -142,6 +142,7 @@ public class KsgPathAnimator extends BasePathAnimator {
     private PointF getTogglePoint(int scale) {
         PointF pointf = new PointF();
         // 减去100 是为了控制 x轴活动范围
+        mViewWidth = 10;
         pointf.x = mRandom.nextInt((mViewWidth - 100));
         // 再Y轴上 为了确保第二个控制点 在第一个点之上,我把Y分成了上下两半
         pointf.y = (float) mRandom.nextInt((mViewHeight - 100)) / scale;
